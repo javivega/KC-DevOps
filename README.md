@@ -1,7 +1,7 @@
 # KC-DevOps
 Practica DevOps del Master KeepCoding
 
-# Metodo de uso de la aplicación de NodeJS
+# Método de uso de la aplicación de NodeJS
 
 Si accedemos al servidor via DNS:
 
@@ -11,7 +11,7 @@ Accederemos a la página de bienvenida de nuestra aplicación de Node, en ella c
 
 http://ec2-34-230-212-167.compute-1.amazonaws.com/images/anuncios/bici.jpg
 
-Accedemos al fichero estatico de una imagende una bicicleta. Los archivos estáticos están configurados para ser servidos por nginx y no por Node. Esto lo podemos comprobar gracias a la cabecera personalizado que he añadadido:
+Accedemos al fichero estático de una imagen de una bicicleta. Los archivos estáticos están configurados para ser servidos por nginx y no por Node. Esto lo podemos comprobar gracias a la cabecera personalizada, que he añadadido:
 
 X-Owner:@MiguelArribas
 
@@ -29,11 +29,11 @@ Esto nos devolverá un token de autenticación con el cual ya podemos hacer peti
 
 http://ec2-34-230-212-167.compute-1.amazonaws.com/apiv1/anuncios?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNThlNjE2YzM5ZjRhNzgzMzA0NTM4N2ExIiwiaWF0IjoxNDkxNDc0Mjk3LCJleHAiOjE0OTE2NDcwOTd9.P27E3QL0HugETC7y4ms3EbqyCPcDPxzX3QuwEofZOPA
 
-Esto es un ejemplo podemos añadir el valor del token, sustituyendo "nuestro_token"
+Esto es un ejemplo, podemos añadir el valor del token, sustituyendo "nuestro_token"
 
 http://ec2-34-230-212-167.compute-1.amazonaws.com/apiv1/anuncios?token=nuestro_token
 
-esto me devolverá todos los anuncion que figuran en la base de datos (MongoDB) de la aplicación.
+esto me devolverá todos los anuncios que figuran en la base de datos (MongoDB) de la aplicación.
 
 El registro de nuevos usuarios lo podemos realizar en el endpoint del api:
 
